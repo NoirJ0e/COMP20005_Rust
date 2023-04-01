@@ -1,7 +1,8 @@
 // Ex2.08
 use std::io as io;
 
-fn main() {
+#[allow(dead_code)]
+pub fn c02() {
     let mut user_input;
     user_input = String::new();
     // std::io::stdin().read_line(&mut user_input).expect("Failed to read input!");

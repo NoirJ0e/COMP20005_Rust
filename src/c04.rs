@@ -1,29 +1,8 @@
 use std::io::{Write,Read};
-fn main() {
-    // Ex4.03
-    /* let (mut days, mut spores): (u32,u32) = (0,2);
-    while spores < 1000000 {
-        days += 1;
-        if days < 3 {
-            continue;
-        } else {
-            spores = fibonacci(days);
-            println!("After {} days, there will be {} spores.", days, spores);
-        }
-    } */
-    // printable_ascii();
-    // simple_character_graph();
-    // count_lines_chars();
-    // count_lines_chars_words();
-    // collatz_conjecture();
-    // next_prime();
-    // sum_of_previous_prime();
-    cal_log();
-}
 
 // Ex4.03
 #[allow(dead_code)]
-fn fibonacci(n: u32) -> u32 {
+pub fn fibonacci(n: u32) -> u32 {
     if n == 0 {
         0
     } else if n == 1 {
@@ -35,7 +14,7 @@ fn fibonacci(n: u32) -> u32 {
 
 // Ex4.04
 #[allow(dead_code)]
-fn printable_ascii() {
+pub fn printable_ascii() {
     let (mut _i, mut _j): (i8,i8) = (0,0);
     println!("           +0  +1  +2  +3  +4  +5  +6  +7");
     println!("        +--------------------------------");
@@ -56,7 +35,7 @@ fn printable_ascii() {
 // Ex4.05
 // use std::io::{Write, Read};
 #[allow(dead_code)]
-fn simple_character_graph() {
+pub fn simple_character_graph() {
     let mut input = String::new();
     // we assume user could have multiple inputs and are separate by space
     print!("Enter numbers: ");
@@ -81,7 +60,7 @@ fn simple_character_graph() {
 
 // Ex4.06
 #[allow(dead_code)]
-fn count_lines_chars() {
+pub fn count_lines_chars() {
     println!("Enter text:");
     let mut user_input = String::new();
     // NOTE: as we are couting lines, the noraml read_lines() is not suitable
@@ -104,7 +83,7 @@ fn count_lines_chars() {
 }
 
 #[allow(dead_code)]
-fn count_lines_chars_words() {
+pub fn count_lines_chars_words() {
     println!("Enter text:");
     let mut user_input = String::new();
     // NOTE: as we are couting lines, the noraml read_lines() is not suitable
@@ -144,7 +123,7 @@ fn count_lines_chars_words() {
 
 // Ex4.08
 #[allow(dead_code)]
-fn collatz_conjecture() {
+pub fn collatz_conjecture() {
     print!("Enter value for nmax: ");
     std::io::stdout().flush().unwrap();
     let mut input = String::new();
@@ -182,7 +161,7 @@ fn collatz_conjecture() {
 }
 
 #[allow(dead_code)]
-fn is_prime(n: u32) -> bool {
+pub fn is_prime(n: u32) -> bool {
     if n == 0 || n == 1 {
         return false;
     }
@@ -195,7 +174,7 @@ fn is_prime(n: u32) -> bool {
 }
 
 #[allow(dead_code)]
-fn next_prime(){
+pub fn next_prime(){
     let mut user_input = String::new();
     print!("Enter an integer value: ");
     std::io::stdout().flush().unwrap();
@@ -209,7 +188,7 @@ fn next_prime(){
 }
 
 #[allow(dead_code)]
-fn sum_of_previous_prime() {
+pub fn sum_of_previous_prime() {
     let mut user_input = String::new();
     std::io::stdin().read_line(&mut user_input).expect("Error reading user input");
     let mut numbers = Vec::new();
@@ -231,7 +210,7 @@ fn sum_of_previous_prime() {
     }
 }
 #[allow(dead_code)]
-fn pow(base: u128, exponent: u128) -> u128 {
+pub fn pow(base: u128, exponent: u128) -> u128 {
     let mut _result = 1;
     for _ in 0..exponent {
         _result *= base;
@@ -240,7 +219,7 @@ fn pow(base: u128, exponent: u128) -> u128 {
 }
 
 #[allow(dead_code)]
-fn cal_log() {
+pub fn cal_log() {
     print!("Enter a number: ");
     std::io::stdout().flush().unwrap();
     let mut user_input = String::new();

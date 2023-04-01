@@ -4,7 +4,7 @@
 // like _year, _month, _date, _month_date, leap_year here
 
 #[allow(dead_code)]
-fn date_tomorrow_with_year() {
+pub fn date_tomorrow_with_year() {
     let (mut _year, mut _month, mut _date, mut _month_date, mut leap_year):(i32, i32, i32, i32, bool) = (0, 0, 0, 0, false);
     println!("Enter a _date in dd/mm/yyyy format: ");
     let mut input = String::new();
@@ -60,7 +60,7 @@ fn date_tomorrow_with_year() {
 
 // Ex3.05 Temperature Conversion
 #[allow(dead_code)]
-fn temperature_conversion() {
+pub fn temperature_conversion() {
     let mut user_input = String::new();
     io::stdin().read_line(&mut user_input).expect("Failed to read input");
     let mut iter = user_input.trim().chars();
@@ -109,7 +109,7 @@ fn temperature_conversion() {
 // use std::io;
 use std::io::{self, Write};
 #[allow(dead_code)]
-fn generalised_converter() {
+pub fn generalised_converter() {
     let mut user_input = String::new();
     print!("Enter a quntitiy: ");
     // refresh print! buffer
@@ -169,7 +169,7 @@ fn generalised_converter() {
 // Ex3.08 Calculating additional taxes
 
 #[allow(dead_code)]
-fn additional_taxes() {
+pub fn additional_taxes() {
     // define different tax _rate
     let _rate0 = 0.000;
     let _rate1 = 0.190;
@@ -245,6 +245,3 @@ fn additional_taxes() {
     println!("net income        : ${:>9.2}", _gross - _tax - _medicare);
 }
 
-fn main() {
-    additional_taxes();
-}
